@@ -1,0 +1,4142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<title>Sonali & Hatson | Wedding Invitation</title>
+
+
+<!-- =====================================================
+     FONTS
+===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+
+<style>
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root{
+
+    --black:#070506;
+
+    --black-soft:#10080a;
+
+    --burgundy:#241016;
+
+    --burgundy-light:#3a1820;
+
+    --gold:#d4af62;
+
+    --gold-light:#f3d993;
+
+    --gold-dark:#977033;
+
+    --ivory:#f8f0e2;
+
+    --muted:#cbbda9;
+
+    --serif:"Cormorant Garamond", Georgia, serif;
+
+    --script:"Great Vibes", cursive;
+
+    --sans:"Montserrat", Arial, sans-serif;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+
+    box-sizing:border-box;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    background:var(--black);
+
+    color:white;
+
+    font-family:var(--sans);
+
+    overflow-x:hidden;
+
+}
+
+
+body.locked{
+
+    overflow:hidden;
+
+}
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+section{
+
+    position:relative;
+
+}
+
+
+.label{
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+}
+
+
+.section{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:120px 22px;
+
+    text-align:center;
+
+}
+
+
+.section-title{
+
+    color:var(--gold-light);
+
+    font-family:var(--serif);
+
+    font-size:clamp(
+        58px,
+        9vw,
+        100px
+    );
+
+    font-weight:500;
+
+    line-height:.86;
+
+    margin:28px 0 35px;
+
+}
+
+
+.script{
+
+    color:var(--gold-light);
+
+    font-family:var(--script);
+
+    font-weight:400;
+
+}
+
+
+.copy{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-family:var(--serif);
+
+    font-size:21px;
+
+    line-height:1.7;
+
+}
+
+
+.gold-line{
+
+    width:70px;
+
+    height:1px;
+
+    margin:35px auto;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+#loading{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:99999;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--black);
+
+    transition:opacity .7s ease;
+
+}
+
+
+#loading.hide{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+.loader-wrap{
+
+    text-align:center;
+
+}
+
+
+.loader-circle{
+
+    width:38px;
+
+    height:38px;
+
+    margin:0 auto 18px;
+
+    border:
+
+        1px solid
+        #584321;
+
+    border-top-color:
+
+        var(--gold-light);
+
+    border-radius:50%;
+
+    animation:
+
+        spin 1s linear infinite;
+
+}
+
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+.loader-text{
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+}
+
+
+/* =====================================================
+   DOOR SCREEN
+===================================================== */
+
+#doorScreen{
+
+    height:100svh;
+
+    min-height:650px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:#100709;
+
+}
+
+
+/* BACKGROUND */
+
+.door-background{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+    background-image:
+
+        url("images/door-opening-cover.png");
+
+    background-position:center;
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+}
+
+
+.door-background::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(241,213,143,.13),
+            transparent 42%
+        ),
+
+        linear-gradient(
+            rgba(0,0,0,.1),
+            rgba(0,0,0,.65)
+        );
+
+}
+
+
+/* =====================================================
+   DOORS
+===================================================== */
+
+.door{
+
+    position:absolute;
+
+    top:0;
+
+    width:50%;
+
+    height:100%;
+
+    z-index:5;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #1e0d08,
+            #70431e 45%,
+            #281108
+        );
+
+    box-shadow:
+
+        inset 0 0 100px
+        rgba(0,0,0,.95);
+
+    transition:
+
+        transform
+        1.6s
+        cubic-bezier(.77,0,.18,1);
+
+}
+
+
+.door.left{
+
+    left:0;
+
+    transform-origin:left center;
+
+}
+
+
+.door.right{
+
+    right:0;
+
+    transform-origin:right center;
+
+}
+
+
+/* GOLD CENTER */
+
+.door-line{
+
+    position:absolute;
+
+    top:0;
+
+    width:3px;
+
+    height:100%;
+
+    z-index:8;
+
+    background:
+
+        linear-gradient(
+            #f6dfa3,
+            #967033,
+            #f6dfa3
+        );
+
+    box-shadow:
+
+        0 0 25px
+        rgba(241,213,143,.55);
+
+    transition:
+
+        transform
+        1.6s
+        cubic-bezier(.77,0,.18,1);
+
+}
+
+
+.door-line.left{
+
+    left:50%;
+
+}
+
+
+.door-line.right{
+
+    right:50%;
+
+}
+
+
+/* =====================================================
+   DOOR CONTENT
+===================================================== */
+
+.door-content{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:10;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    transition:
+
+        opacity .7s ease,
+
+        transform 1s ease;
+
+}
+
+
+.door-top{
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    letter-spacing:5px;
+
+}
+
+
+.monogram{
+
+    color:var(--gold-light);
+
+    font-family:var(--serif);
+
+    font-size:48px;
+
+    letter-spacing:9px;
+
+    margin:22px 0;
+
+    text-shadow:
+        0 4px 20px #000;
+
+}
+
+
+.door-small{
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    letter-spacing:5px;
+
+}
+
+
+.door-names{
+
+    color:#fff9ec;
+
+    font-family:var(--serif);
+
+    font-size:
+
+        clamp(
+            58px,
+            10vw,
+            105px
+        );
+
+    font-weight:500;
+
+    line-height:.78;
+
+    margin:30px 0;
+
+    text-shadow:
+
+        0 5px 30px
+        rgba(0,0,0,.8);
+
+}
+
+
+.door-names span{
+
+    display:block;
+
+    color:var(--gold-light);
+
+    font-family:var(--script);
+
+    font-size:38px;
+
+    line-height:1;
+
+    margin:18px 0;
+
+}
+
+
+.door-tagline{
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+
+}
+
+
+.door-instruction{
+
+    color:#fff0c5;
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+    margin-top:45px;
+
+}
+
+
+#openButton{
+
+    position:relative;
+
+    z-index:20;
+
+    margin-top:20px;
+
+    padding:17px 42px;
+
+    border:
+
+        1px solid
+        var(--gold-light);
+
+    border-radius:50px;
+
+    background:
+
+        linear-gradient(
+            #e5c16c,
+            #95692b
+        );
+
+    color:white;
+
+    font-family:var(--serif);
+
+    font-size:19px;
+
+    letter-spacing:5px;
+
+    cursor:pointer;
+
+    box-shadow:
+
+        0 0 35px
+        rgba(241,213,143,.4);
+
+    transition:.3s;
+
+}
+
+
+#openButton:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+
+        0 0 50px
+        rgba(241,213,143,.6);
+
+}
+
+
+.music-note{
+
+    margin-top:22px;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:
+        rgba(8,5,6,.8);
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:7px;
+
+    letter-spacing:2px;
+
+}
+
+
+/* OPEN */
+
+#doorScreen.opened .door.left{
+
+    transform:
+        translateX(-100%);
+
+}
+
+
+#doorScreen.opened .door.right{
+
+    transform:
+        translateX(100%);
+
+}
+
+
+#doorScreen.opened .door-line.left{
+
+    transform:
+        translateX(-50vw);
+
+}
+
+
+#doorScreen.opened .door-line.right{
+
+    transform:
+        translateX(50vw);
+
+}
+
+
+#doorScreen.opened .door-content{
+
+    opacity:0;
+
+    transform:
+        scale(1.05);
+
+    pointer-events:none;
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(212,175,98,.07),
+            transparent 55%
+        );
+
+}
+
+
+.intro-copy{
+
+    max-width:680px;
+
+    margin:0 auto;
+
+}
+
+
+.bible-verse{
+
+    max-width:680px;
+
+    margin:55px auto 0;
+
+    padding:30px 20px;
+
+    border-top:
+        1px solid
+        rgba(212,175,98,.35);
+
+    border-bottom:
+        1px solid
+        rgba(212,175,98,.35);
+
+}
+
+
+.bible-verse p{
+
+    color:#ddd0bc;
+
+    font-family:var(--serif);
+
+    font-size:25px;
+
+    line-height:1.5;
+
+    font-style:italic;
+
+}
+
+
+.bible-verse small{
+
+    display:block;
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:7px;
+
+    letter-spacing:4px;
+
+    margin-top:16px;
+
+}
+
+
+/* =====================================================
+   FROM US TO FOREVER
+===================================================== */
+
+.story{
+
+    padding-top:70px;
+
+}
+
+
+.story-image-wrap{
+
+    width:min(
+        780px,
+        94vw
+    );
+
+    margin:50px auto 0;
+
+    position:relative;
+
+}
+
+
+.story-image-wrap::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border:
+
+        1px solid
+        rgba(212,175,98,.35);
+
+    pointer-events:none;
+
+}
+
+
+.story-image{
+
+    display:block;
+
+    width:100%;
+
+    height:
+
+        min(
+            760px,
+            110vw
+        );
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border:
+
+        1px solid
+        var(--gold);
+
+}
+
+
+.story-caption{
+
+    color:var(--gold-light);
+
+    font-family:var(--script);
+
+    font-size:42px;
+
+    margin-top:38px;
+
+}
+
+
+/* =====================================================
+   BRIDE & GROOM
+===================================================== */
+
+.couple-section{
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #080506,
+            #17090e,
+            #080506
+        );
+
+}
+
+
+.couple-grid{
+
+    max-width:1000px;
+
+    margin:65px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        100px
+        1fr;
+
+    align-items:center;
+
+}
+
+
+.couple-card{
+
+    padding:15px;
+
+}
+
+
+.couple-photo-frame{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:3 / 4;
+
+    overflow:hidden;
+
+    border:
+
+        1px solid
+        var(--gold);
+
+    background:#100709;
+
+}
+
+
+.couple-photo{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform 1.2s ease;
+
+}
+
+
+.couple-card:hover
+.couple-photo{
+
+    transform:scale(1.04);
+
+}
+
+
+.couple-role{
+
+    color:var(--gold);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+    margin-top:28px;
+
+}
+
+
+.couple-name{
+
+    color:var(--ivory);
+
+    font-family:var(--serif);
+
+    font-size:
+
+        clamp(
+            27px,
+            4vw,
+            40px
+        );
+
+    line-height:1.05;
+
+    margin-top:12px;
+
+}
+
+
+.couple-divider{
+
+    color:var(--gold-light);
+
+    font-size:28px;
+
+}
+
+
+/* =====================================================
+   SCRATCH SECTION
+===================================================== */
+
+.scratch-section{
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(212,175,98,.07),
+            transparent 55%
+        ),
+
+        linear-gradient(
+            #080506,
+            #180a0e,
+            #080506
+        );
+
+}
+
+
+/* SCRATCH CARD */
+
+.scratch-card{
+
+    position:relative;
+
+    width:min(
+        92vw,
+        680px
+    );
+
+    height:370px;
+
+    margin:50px auto 0;
+
+    overflow:hidden;
+
+    border:
+
+        2px solid
+        var(--gold);
+
+    background:var(--ivory);
+
+    box-shadow:
+
+        0 0 0 1px #5a431f,
+
+        0 25px 80px
+        rgba(0,0,0,.8);
+
+}
+
+
+/* REVEAL */
+
+.date-under{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:var(--burgundy);
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #fffdf9,
+            #f0dfbf 60%,
+            #d7bc8b
+        );
+
+}
+
+
+.date-label{
+
+    color:var(--gold-dark);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+
+}
+
+
+.date-number{
+
+    font-family:var(--serif);
+
+    font-size:120px;
+
+    line-height:.7;
+
+    margin:17px 0;
+
+}
+
+
+.date-month{
+
+    color:var(--gold-dark);
+
+    font-family:var(--script);
+
+    font-size:68px;
+
+}
+
+
+.date-time{
+
+    font-family:var(--serif);
+
+    font-size:21px;
+
+    margin-top:18px;
+
+}
+
+
+.date-hint{
+
+    color:#7d6745;
+
+    font-family:var(--sans);
+
+    font-size:7px;
+
+    letter-spacing:3px;
+
+    margin-top:12px;
+
+}
+
+
+/* CANVAS */
+
+#scratchCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:10;
+
+    touch-action:none;
+
+    cursor:crosshair;
+
+}
+
+
+.scratch-card.revealed
+#scratchCanvas{
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:1s;
+
+}
+
+
+.scratch-instruction{
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    margin-top:20px;
+
+}
+
+
+#revealButton{
+
+    margin-top:17px;
+
+    padding:12px 22px;
+
+    border:
+
+        1px solid
+        var(--gold);
+
+    background:
+
+        rgba(212,175,98,.08);
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+}
+
+
+/* =====================================================
+   AFTER SCRATCH
+===================================================== */
+
+#afterScratch{
+
+    display:none;
+
+}
+
+
+#afterScratch.show{
+
+    display:block;
+
+    animation:
+
+        fadeUp .8s ease;
+
+}
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* COUNTDOWN */
+
+.countdown{
+
+    max-width:700px;
+
+    margin:55px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    border-top:
+        1px solid
+        rgba(212,175,98,.3);
+
+    border-bottom:
+        1px solid
+        rgba(212,175,98,.3);
+
+    padding:27px 0;
+
+}
+
+
+.countdown-item
++ .countdown-item{
+
+    border-left:
+        1px solid
+        rgba(212,175,98,.2);
+
+}
+
+
+.count-number{
+
+    display:block;
+
+    color:var(--gold-light);
+
+    font-family:var(--serif);
+
+    font-size:40px;
+
+}
+
+
+.count-label{
+
+    color:var(--gold);
+
+    font-family:var(--sans);
+
+    font-size:7px;
+
+    letter-spacing:3px;
+
+}
+
+
+/* CALENDAR */
+
+.calendar-wrap{
+
+    margin-top:32px;
+
+}
+
+
+.calendar-button{
+
+    display:inline-block;
+
+    padding:16px 30px;
+
+    border:
+        1px solid
+        var(--gold);
+
+    color:var(--gold-light);
+
+    text-decoration:none;
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    transition:.3s;
+
+}
+
+
+.calendar-button:hover{
+
+    background:
+        rgba(212,175,98,.1);
+
+}
+
+
+/* =====================================================
+   WEDDING DETAILS
+===================================================== */
+
+.details{
+
+    max-width:none;
+
+    background:var(--ivory);
+
+    color:var(--burgundy);
+
+}
+
+
+.details .label{
+
+    color:var(--gold-dark);
+
+}
+
+
+.details .section-title{
+
+    color:var(--burgundy);
+
+}
+
+
+.details-grid{
+
+    max-width:900px;
+
+    margin:60px auto 35px;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1.5fr;
+
+    border-top:
+        1px solid
+        rgba(72,21,34,.2);
+
+    border-bottom:
+        1px solid
+        rgba(72,21,34,.2);
+
+}
+
+
+.detail{
+
+    padding:35px;
+
+}
+
+
+.detail + .detail{
+
+    border-left:
+        1px solid
+        rgba(72,21,34,.15);
+
+}
+
+
+.detail-label{
+
+    color:var(--gold-dark);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+
+}
+
+
+.detail-value{
+
+    display:block;
+
+    color:var(--burgundy);
+
+    font-family:var(--serif);
+
+    font-size:32px;
+
+    line-height:1.1;
+
+    margin-top:12px;
+
+}
+
+
+.detail-address{
+
+    color:#654c4c;
+
+    font-family:var(--serif);
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    margin-top:15px;
+
+}
+
+
+.map-button{
+
+    display:inline-block;
+
+    padding:14px 25px;
+
+    border:
+        1px solid
+        var(--gold-dark);
+
+    color:var(--gold-dark);
+
+    text-decoration:none;
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+
+/* =====================================================
+   FAMILY BLESSINGS
+===================================================== */
+
+.families{
+
+    max-width:none;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(212,175,98,.07),
+            transparent 55%
+        ),
+
+        linear-gradient(
+            180deg,
+            #15090d,
+            #090507
+        );
+
+    overflow:hidden;
+
+}
+
+
+.families::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    top:50%;
+
+    left:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(212,175,98,.05),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+
+.family-heading{
+
+    position:relative;
+
+    z-index:2;
+
+    color:var(--ivory);
+
+    font-family:var(--serif);
+
+    font-size:
+
+        clamp(
+            50px,
+            8vw,
+            82px
+        );
+
+    font-weight:500;
+
+    line-height:.9;
+
+    margin:28px 0 65px;
+
+}
+
+
+.family-heading span{
+
+    color:var(--gold-light);
+
+    font-family:var(--script);
+
+}
+
+
+/* FAMILY BLOCK */
+
+.family-block{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:950px;
+
+    margin:0 auto 70px;
+
+}
+
+
+.family-block-title{
+
+    color:var(--gold);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:4px;
+
+    margin-bottom:35px;
+
+}
+
+
+/* PARENTS */
+
+.parents-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        70px
+        1fr;
+
+    align-items:center;
+
+}
+
+
+.family-side{
+
+    padding:15px;
+
+}
+
+
+.family-side-title{
+
+    color:var(--gold);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+
+.parent-name{
+
+    color:var(--ivory);
+
+    font-family:var(--serif);
+
+    font-size:26px;
+
+    line-height:1.2;
+
+}
+
+
+.parent-amp{
+
+    color:var(--gold-light);
+
+    font-family:var(--script);
+
+    font-size:26px;
+
+    margin:8px 0;
+
+}
+
+
+.family-star{
+
+    color:var(--gold-light);
+
+    font-size:23px;
+
+    text-align:center;
+
+}
+
+
+/* RELATIVES */
+
+.relatives{
+
+    padding-top:55px;
+
+    border-top:
+        1px solid
+        rgba(212,175,98,.25);
+
+}
+
+
+.relatives-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        70px
+        1fr;
+
+    align-items:start;
+
+}
+
+
+.relative-column{
+
+    padding:10px 25px;
+
+}
+
+
+.relative-name{
+
+    color:var(--ivory);
+
+    font-family:var(--serif);
+
+    font-size:23px;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+}
+
+
+.relative-role{
+
+    display:block;
+
+    color:var(--gold);
+
+    font-family:var(--sans);
+
+    font-size:7px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    margin-top:8px;
+
+}
+
+
+.family-message{
+
+    max-width:600px;
+
+    margin:65px auto 0;
+
+    padding-top:30px;
+
+    border-top:
+        1px solid
+        rgba(212,175,98,.22);
+
+    color:#cfc0ae;
+
+    font-family:var(--serif);
+
+    font-size:19px;
+
+    font-style:italic;
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final{
+
+    min-height:100svh;
+
+    max-width:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+
+.final-background{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        url("images/wedding.jpg");
+
+    background-position:center;
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    transform:scale(1.03);
+
+}
+
+
+.final::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            rgba(7,5,6,.15),
+            rgba(7,5,6,.94)
+        );
+
+}
+
+
+.final-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+
+.final-title{
+
+    color:var(--gold-light);
+
+    font-family:var(--serif);
+
+    font-size:
+
+        clamp(
+            70px,
+            12vw,
+            130px
+        );
+
+    font-weight:500;
+
+    line-height:.8;
+
+    margin:25px 0 35px;
+
+}
+
+
+.final-love{
+
+    color:var(--gold-light);
+
+    font-family:var(--script);
+
+    font-size:43px;
+
+    line-height:1.25;
+
+}
+
+
+.final-date{
+
+    color:var(--gold-light);
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    letter-spacing:5px;
+
+    margin-top:28px;
+
+}
+
+
+.final-thank{
+
+    color:#d4c8b7;
+
+    font-family:var(--serif);
+
+    font-size:17px;
+
+    font-style:italic;
+
+    margin-top:35px;
+
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+#musicButton{
+
+    display:none;
+
+    position:fixed;
+
+    right:18px;
+
+    bottom:18px;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    z-index:1000;
+
+    background:
+        rgba(8,5,6,.9);
+
+    border:
+        1px solid
+        var(--gold);
+
+    color:var(--gold-light);
+
+    cursor:pointer;
+
+    box-shadow:
+        0 5px 20px #0008;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    .section{
+
+        padding:
+            90px 20px;
+
+    }
+
+
+    .door-names{
+
+        font-size:57px;
+
+    }
+
+
+    .door-names span{
+
+        font-size:32px;
+
+    }
+
+
+    .section-title{
+
+        font-size:58px;
+
+    }
+
+
+    .story-image{
+
+        height:110vw;
+
+    }
+
+
+    /* COUPLE */
+
+    .couple-grid{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+
+    .couple-divider{
+
+        transform:
+            rotate(90deg);
+
+    }
+
+
+    .couple-card{
+
+        padding:0 10px;
+
+    }
+
+
+    /* SCRATCH */
+
+    .scratch-card{
+
+        height:320px;
+
+    }
+
+
+    .date-number{
+
+        font-size:96px;
+
+    }
+
+
+    .date-month{
+
+        font-size:54px;
+
+    }
+
+
+    .date-time{
+
+        font-size:17px;
+
+    }
+
+
+    /* COUNTDOWN */
+
+    .count-number{
+
+        font-size:27px;
+
+    }
+
+
+    .count-label{
+
+        font-size:6px;
+
+        letter-spacing:1px;
+
+    }
+
+
+    /* DETAILS */
+
+    .details-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .detail + .detail{
+
+        border-left:0;
+
+        border-top:
+            1px solid
+            rgba(72,21,34,.15);
+
+    }
+
+
+    /* FAMILY */
+
+    .family-heading{
+
+        font-size:54px;
+
+    }
+
+
+    .parents-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+
+    .relatives-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+
+    .family-star{
+
+        transform:
+            rotate(90deg);
+
+    }
+
+
+    .relative-column{
+
+        padding:10px;
+
+    }
+
+
+    .parent-name{
+
+        font-size:23px;
+
+    }
+
+
+    .relative-name{
+
+        font-size:21px;
+
+    }
+
+
+    /* FINAL */
+
+    .final-love{
+
+        font-size:37px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body class="locked">
+
+
+<!-- =====================================================
+     LOADING
+===================================================== -->
+
+<div id="loading">
+
+    <div class="loader-wrap">
+
+        <div class="loader-circle"></div>
+
+        <div class="loader-text">
+
+            PREPARING YOUR INVITATION
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+    id="music"
+    preload="metadata"
+    loop
+    playsinline
+>
+
+    <source
+        src="wedding-music.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<button id="musicButton">
+
+    ♫
+
+</button>
+
+
+<!-- =====================================================
+     CINEMATIC DOOR
+===================================================== -->
+
+<section id="doorScreen">
+
+
+    <div class="door-background"></div>
+
+
+    <div class="door-content">
+
+
+        <div class="door-top">
+
+            YOU ARE JOYFULLY INVITED
+
+        </div>
+
+
+        <div class="monogram">
+
+            S │ H
+
+        </div>
+
+
+        <div class="door-small">
+
+            TO THE WEDDING OF
+
+        </div>
+
+
+        <div class="door-names">
+
+            SONALI
+
+            <span>
+
+                and
+
+            </span>
+
+            HATSON
+
+        </div>
+
+
+        <div class="door-tagline">
+
+            TWO SOULS · ONE PROMISE
+
+        </div>
+
+
+        <div class="door-instruction">
+
+            OPEN THE DOORS TO OUR FOREVER
+
+        </div>
+
+
+        <button id="openButton">
+
+            ✦ &nbsp; OPEN &nbsp; ✦
+
+        </button>
+
+
+        <div class="music-note">
+
+            ♫ &nbsp;
+            MUSIC WILL PLAY ONCE YOU OPEN
+
+        </div>
+
+
+    </div>
+
+
+    <div class="door left"></div>
+
+    <div class="door right"></div>
+
+
+    <div class="door-line left"></div>
+
+    <div class="door-line right"></div>
+
+
+</section>
+
+
+<!-- =====================================================
+     INVITATION
+===================================================== -->
+
+<main id="invitation">
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="section intro">
+
+
+    <div class="label">
+
+        A DAY WRITTEN BY GOD
+
+    </div>
+
+
+    <h1 class="section-title">
+
+        Two hearts.
+
+        <br>
+
+        <span class="script">
+
+            One faith.
+
+        </span>
+
+        <br>
+
+        One forever.
+
+    </h1>
+
+
+    <p class="copy intro-copy">
+
+        With grateful hearts and joyful spirits,
+        we invite you to witness and celebrate
+        the beginning of our married life.
+
+    </p>
+
+
+    <div class="bible-verse">
+
+        <p>
+
+            “Therefore what God has joined together,
+            let no one separate.”
+
+        </p>
+
+
+        <small>
+
+            MARK 10:9
+
+        </small>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     FROM US TO FOREVER
+===================================================== -->
+
+<section class="section story">
+
+
+    <div class="label">
+
+        OUR LITTLE STORY
+
+    </div>
+
+
+    <h1 class="section-title">
+
+        From
+
+        <span class="script">
+
+            us
+
+        </span>
+
+        <br>
+
+        to forever.
+
+    </h1>
+
+
+    <div class="gold-line"></div>
+
+
+    <div class="story-image-wrap">
+
+
+        <img
+            src="images/wedding.jpg"
+            class="story-image"
+            alt="Sonali and Hatson"
+        >
+
+
+    </div>
+
+
+    <div class="story-caption">
+
+        Two hearts. One beautiful journey.
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     BRIDE & GROOM
+===================================================== -->
+
+<section class="section couple-section">
+
+
+    <div class="label">
+
+        THE BRIDE &amp; THE GROOM
+
+    </div>
+
+
+    <h1 class="section-title">
+
+        The two who
+
+        <br>
+
+        <span class="script">
+
+            found forever.
+
+        </span>
+
+    </h1>
+
+
+    <div class="couple-grid">
+
+
+        <!-- BRIDE -->
+
+        <div class="couple-card">
+
+
+            <div class="couple-photo-frame">
+
+                <img
+                    src="images/bride.png"
+                    class="couple-photo"
+                    alt="Sonali"
+                >
+
+            </div>
+
+
+            <div class="couple-role">
+
+                THE BRIDE
+
+            </div>
+
+
+            <div class="couple-name">
+
+                Sonali Anthony Joseph
+
+            </div>
+
+
+        </div>
+
+
+        <!-- DIVIDER -->
+
+        <div class="couple-divider">
+
+            ✦
+
+        </div>
+
+
+        <!-- GROOM -->
+
+        <div class="couple-card">
+
+
+            <div class="couple-photo-frame">
+
+                <img
+                    src="images/groom.png"
+                    class="couple-photo"
+                    alt="Hatson"
+                >
+
+            </div>
+
+
+            <div class="couple-role">
+
+                THE GROOM
+
+            </div>
+
+
+            <div class="couple-name">
+
+                Hatson Robinson Nadar
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     SCRATCH CARD
+===================================================== -->
+
+<section class="section scratch-section">
+
+
+    <div class="label">
+
+        A LITTLE SURPRISE
+
+    </div>
+
+
+    <h1 class="section-title">
+
+        Scratch to reveal
+
+        <br>
+
+        <span class="script">
+
+            our special day.
+
+        </span>
+
+    </h1>
+
+
+    <p class="copy">
+
+        Some dates are meant to be remembered forever.
+
+    </p>
+
+
+    <div
+        class="scratch-card"
+        id="scratchCard"
+    >
+
+
+        <!-- DATE UNDER SCRATCH -->
+
+        <div class="date-under">
+
+
+            <div class="date-label">
+
+                OUR WEDDING DAY
+
+            </div>
+
+
+            <div class="date-number">
+
+                05
+
+            </div>
+
+
+            <div class="date-month">
+
+                November
+
+            </div>
+
+
+            <div class="date-time">
+
+                Thursday · 4:00 PM — 6:00 PM
+
+            </div>
+
+
+            <div class="date-hint">
+
+                OUR DAY · OUR FOREVER
+
+            </div>
+
+
+        </div>
+
+
+        <!-- SCRATCH -->
+
+        <canvas
+            id="scratchCanvas"
+        ></canvas>
+
+
+    </div>
+
+
+    <div class="scratch-instruction">
+
+        ✦ SCRATCH THE GOLD CARD TO REVEAL THE DATE ✦
+
+    </div>
+
+
+    <button id="revealButton">
+
+        REVEAL DATE
+
+    </button>
+
+
+    <!-- AFTER SCRATCH -->
+
+    <div id="afterScratch">
+
+
+        <div class="countdown">
+
+
+            <div class="countdown-item">
+
+                <span
+                    class="count-number"
+                    id="days"
+                >
+
+                    00
+
+                </span>
+
+                <span class="count-label">
+
+                    DAYS
+
+                </span>
+
+            </div>
+
+
+            <div class="countdown-item">
+
+                <span
+                    class="count-number"
+                    id="hours"
+                >
+
+                    00
+
+                </span>
+
+                <span class="count-label">
+
+                    HOURS
+
+                </span>
+
+            </div>
+
+
+            <div class="countdown-item">
+
+                <span
+                    class="count-number"
+                    id="minutes"
+                >
+
+                    00
+
+                </span>
+
+                <span class="count-label">
+
+                    MINUTES
+
+                </span>
+
+            </div>
+
+
+            <div class="countdown-item">
+
+                <span
+                    class="count-number"
+                    id="seconds"
+                >
+
+                    00
+
+                </span>
+
+                <span class="count-label">
+
+                    SECONDS
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="calendar-wrap">
+
+
+            <a
+                class="calendar-button"
+
+                target="_blank"
+
+                rel="noopener"
+
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20of%20Sonali%20%26%20Hatson&dates=20261105T103000Z%2F20261105T123000Z&details=Wedding%20ceremony%20of%20Sonali%20Anthony%20Joseph%20and%20Hatson%20Robinson%20Nadar&location=Panvel%20AG%20Church%2C%20Sukapur%2C%20Navi%20Mumbai%2C%20Palidevad%2C%20Maharashtra%20410206"
+            >
+
+                ＋ ADD TO CALENDAR
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     WEDDING DETAILS
+===================================================== -->
+
+<section class="section details">
+
+
+    <div class="label">
+
+        THE WEDDING CEREMONY
+
+    </div>
+
+
+    <h1 class="section-title">
+
+        A day to
+
+        <br>
+
+        <span class="script">
+
+            remember.
+
+        </span>
+
+    </h1>
+
+
+    <div class="details-grid">
+
+
+        <!-- TIME -->
+
+        <div class="detail">
+
+
+            <div class="detail-label">
+
+                DATE &amp; TIME
+
+            </div>
+
+
+            <strong class="detail-value">
+
+                05 November 2026
+
+            </strong>
+
+
+            <p class="detail-address">
+
+                Thursday
+
+                <br>
+
+                4:00 PM — 6:00 PM
+
+            </p>
+
+
+        </div>
+
+
+        <!-- VENUE -->
+
+        <div class="detail">
+
+
+            <div class="detail-label">
+
+                VENUE
+
+            </div>
+
+
+            <strong class="detail-value">
+
+                Panvel AG Church
+
+            </strong>
+
+
+            <p class="detail-address">
+
+                Sukapur, Navi Mumbai,
+
+                <br>
+
+                Palidevad,
+
+                <br>
+
+                Maharashtra 410206
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+    <a
+        class="map-button"
+
+        target="_blank"
+
+        href="https://share.google/NKrghPApoqjRIUKpM"
+    >
+
+        ⌖ VIEW LOCATION
+
+    </a>
+
+
+</section>
+
+
+<!-- =====================================================
+     FAMILY BLESSINGS
+===================================================== -->
+
+<section class="section families">
+
+
+    <div class="label">
+
+        WITH LOVE &amp; BLESSINGS
+
+    </div>
+
+
+    <h1 class="family-heading">
+
+        Surrounded by
+
+        <br>
+
+        <span>
+
+            love &amp; family.
+
+        </span>
+
+    </h1>
+
+
+    <!-- PARENTS -->
+
+    <div class="family-block">
+
+
+        <div class="family-block-title">
+
+            OUR PARENTS
+
+        </div>
+
+
+        <div class="parents-grid">
+
+
+            <!-- BRIDE PARENTS -->
+
+            <div class="family-side">
+
+
+                <div class="family-side-title">
+
+                    BRIDE'S FAMILY
+
+                </div>
+
+
+                <div class="parent-name">
+
+                    Anthony Andrew Joseph
+
+                </div>
+
+
+                <div class="parent-amp">
+
+                    &amp;
+
+                </div>
+
+
+                <div class="parent-name">
+
+                    Reshma Anthony Joseph
+
+                </div>
+
+
+            </div>
+
+
+            <div class="family-star">
+
+                ✦
+
+            </div>
+
+
+            <!-- GROOM PARENTS -->
+
+            <div class="family-side">
+
+
+                <div class="family-side-title">
+
+                    GROOM'S FAMILY
+
+                </div>
+
+
+                <div class="parent-name">
+
+                    Robinson Joseph Nadar
+
+                </div>
+
+
+                <div class="parent-amp">
+
+                    &amp;
+
+                </div>
+
+
+                <div class="parent-name">
+
+                    Lillibai Robinson Nadar
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- OTHER FAMILY -->
+
+    <div class="family-block relatives">
+
+
+        <div class="family-block-title">
+
+            WITH LOVE FROM OUR FAMILIES
+
+        </div>
+
+
+        <div class="relatives-grid">
+
+
+            <!-- BRIDE FAMILY -->
+
+            <div class="relative-column">
+
+
+                <div class="family-side-title">
+
+                    FROM THE BRIDE'S FAMILY
+
+                </div>
+
+
+                <div class="relative-name">
+
+                    Vidya Anthony Joseph
+
+                    <span class="relative-role">
+
+                        Sister
+
+                    </span>
+
+                </div>
+
+
+                <div class="relative-name">
+
+                    Vaishnavi Anthony Joseph
+
+                    <span class="relative-role">
+
+                        Sister
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="family-star">
+
+                ✦
+
+            </div>
+
+
+            <!-- GROOM FAMILY -->
+
+            <div class="relative-column">
+
+
+                <div class="family-side-title">
+
+                    FROM THE GROOM'S FAMILY
+
+                </div>
+
+
+                <div class="relative-name">
+
+                    Sebilin Febia Nivas
+
+                    <span class="relative-role">
+
+                        Sister
+
+                    </span>
+
+                </div>
+
+
+                <div class="relative-name">
+
+                    Madan Nivas
+
+                    <span class="relative-role">
+
+                        Brother-in-law
+
+                    </span>
+
+                </div>
+
+
+                <div class="relative-name">
+
+                    Suzzanna Madan Nivas
+
+                    <span class="relative-role">
+
+                        Niece
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="family-message">
+
+        With grateful hearts,
+        we celebrate this beautiful
+        beginning together.
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final">
+
+
+    <div class="final-background"></div>
+
+
+    <div class="final-content">
+
+
+        <div class="label">
+
+            UNTIL WE MEET YOU THERE
+
+        </div>
+
+
+        <h1 class="final-title">
+
+            Forever
+
+            <br>
+
+            <span class="script">
+
+                begins here.
+
+            </span>
+
+        </h1>
+
+
+        <div class="final-love">
+
+            With love,
+
+            <br>
+
+            Sonali &amp; Hatson
+
+        </div>
+
+
+        <div class="final-date">
+
+            05 · NOVEMBER · 2026
+
+        </div>
+
+
+        <div class="final-thank">
+
+            Thank you for being part of our story.
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+<script>
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const loading =
+    document.getElementById("loading");
+
+const doorScreen =
+    document.getElementById("doorScreen");
+
+const openButton =
+    document.getElementById("openButton");
+
+const invitation =
+    document.getElementById("invitation");
+
+const music =
+    document.getElementById("music");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+setTimeout(function(){
+
+    loading.classList.add("hide");
+
+},800);
+
+
+/* =====================================================
+   OPEN DOORS
+===================================================== */
+
+openButton.addEventListener(
+    "click",
+    function(){
+
+        if(
+            doorScreen.classList.contains(
+                "opened"
+            )
+        ){
+
+            return;
+
+        }
+
+
+        /* MUSIC */
+
+        music.volume=.6;
+
+        music.play().catch(
+            function(error){
+
+                console.log(
+                    "Music autoplay:",
+                    error
+                );
+
+            }
+        );
+
+
+        /* DOORS */
+
+        doorScreen.classList.add(
+            "opened"
+        );
+
+
+        /*
+           Wait for doors.
+        */
+
+        setTimeout(
+            function(){
+
+                document.body.classList.remove(
+                    "locked"
+                );
+
+
+                invitation.style.display=
+                    "block";
+
+
+                musicButton.style.display=
+                    "block";
+
+
+                /*
+                   Scratch card is initialized
+                   ONLY after invitation is visible.
+                */
+
+                requestAnimationFrame(
+                    function(){
+
+                        requestAnimationFrame(
+                            function(){
+
+                                initializeScratch();
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /*
+                   Move into invitation.
+                */
+
+                setTimeout(
+                    function(){
+
+                        window.scrollTo({
+
+                            top:
+                                window.innerHeight,
+
+                            behavior:
+                                "smooth"
+
+                        });
+
+                    },
+                    200
+                );
+
+
+            },
+            1200
+        );
+
+    }
+);
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+musicButton.addEventListener(
+    "click",
+    function(){
+
+        if(
+            music.paused
+        ){
+
+            music.play().catch(
+                function(){}
+            );
+
+            musicButton.innerHTML="♫";
+
+        }
+        else{
+
+            music.pause();
+
+            musicButton.innerHTML="♪";
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   SCRATCH CARD
+===================================================== */
+
+const scratchCard =
+    document.getElementById(
+        "scratchCard"
+    );
+
+const scratchCanvas =
+    document.getElementById(
+        "scratchCanvas"
+    );
+
+const ctx =
+    scratchCanvas.getContext(
+        "2d"
+    );
+
+
+let scratching=false;
+
+let lastPoint=null;
+
+let revealed=false;
+
+
+/* =====================================================
+   SETUP SCRATCH
+===================================================== */
+
+function setupScratch(){
+
+    const rect =
+        scratchCard.getBoundingClientRect();
+
+
+    if(
+        rect.width===0 ||
+        rect.height===0
+    ){
+
+        return;
+
+    }
+
+
+    const ratio =
+        Math.min(
+            window.devicePixelRatio || 1,
+            2
+        );
+
+
+    scratchCanvas.width=
+        rect.width*ratio;
+
+
+    scratchCanvas.height=
+        rect.height*ratio;
+
+
+    scratchCanvas.style.width=
+        rect.width+"px";
+
+
+    scratchCanvas.style.height=
+        rect.height+"px";
+
+
+    ctx.setTransform(
+        ratio,
+        0,
+        0,
+        ratio,
+        0,
+        0
+    );
+
+
+    /* GOLD GRADIENT */
+
+    const gradient=
+        ctx.createLinearGradient(
+            0,
+            0,
+            rect.width,
+            rect.height
+        );
+
+
+    gradient.addColorStop(
+        0,
+        "#8c672d"
+    );
+
+
+    gradient.addColorStop(
+        .25,
+        "#d4af62"
+    );
+
+
+    gradient.addColorStop(
+        .5,
+        "#f3d993"
+    );
+
+
+    gradient.addColorStop(
+        .75,
+        "#c39749"
+    );
+
+
+    gradient.addColorStop(
+        1,
+        "#8a642b"
+    );
+
+
+    ctx.globalCompositeOperation=
+        "source-over";
+
+
+    ctx.fillStyle=
+        gradient;
+
+
+    ctx.fillRect(
+        0,
+        0,
+        rect.width,
+        rect.height
+    );
+
+
+    /* TEXTURE */
+
+    for(
+        let i=0;
+        i<2500;
+        i++
+    ){
+
+        ctx.fillStyle=
+            i%2===0
+
+            ?
+
+            "rgba(255,255,255,.10)"
+
+            :
+
+            "rgba(70,40,10,.08)";
+
+
+        ctx.fillRect(
+
+            Math.random()*
+                rect.width,
+
+            Math.random()*
+                rect.height,
+
+            1,
+            1
+
+        );
+
+    }
+
+
+    /* SCRATCH TEXT */
+
+    ctx.textAlign="center";
+
+    ctx.textBaseline="middle";
+
+
+    ctx.fillStyle="#fff8e8";
+
+
+    ctx.font=
+        "bold 11px Montserrat";
+
+
+    ctx.fillText(
+
+        "SCRATCH HERE",
+
+        rect.width/2,
+
+        rect.height/2-25
+
+    );
+
+
+    ctx.font=
+        "32px Cormorant Garamond";
+
+
+    ctx.fillText(
+
+        "Reveal our wedding day",
+
+        rect.width/2,
+
+        rect.height/2+20
+
+    );
+
+}
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+function initializeScratch(){
+
+    if(
+        scratchCard.offsetWidth===0
+    ){
+
+        return;
+
+    }
+
+
+    setupScratch();
+
+}
+
+
+/* =====================================================
+   POINTER POSITION
+===================================================== */
+
+function getPoint(event){
+
+    const rect=
+        scratchCanvas.getBoundingClientRect();
+
+
+    return{
+
+        x:
+            event.clientX -
+            rect.left,
+
+        y:
+            event.clientY -
+            rect.top
+
+    };
+
+}
+
+
+/* =====================================================
+   SCRATCH
+===================================================== */
+
+function scratch(event){
+
+    if(
+        !scratching ||
+        revealed
+    ){
+
+        return;
+
+    }
+
+
+    const point=
+        getPoint(event);
+
+
+    ctx.globalCompositeOperation=
+        "destination-out";
+
+
+    ctx.lineWidth=70;
+
+    ctx.lineCap="round";
+
+    ctx.lineJoin="round";
+
+
+    ctx.beginPath();
+
+
+    if(lastPoint){
+
+        ctx.moveTo(
+            lastPoint.x,
+            lastPoint.y
+        );
+
+
+        ctx.lineTo(
+            point.x,
+            point.y
+        );
+
+
+    }
+    else{
+
+        ctx.arc(
+            point.x,
+            point.y,
+            35,
+            0,
+            Math.PI*2
+        );
+
+    }
+
+
+    ctx.stroke();
+
+
+    lastPoint=point;
+
+
+    if(
+        Math.random()<.12
+    ){
+
+        checkScratch();
+
+    }
+
+}
+
+
+/* =====================================================
+   CHECK SCRATCH
+===================================================== */
+
+function checkScratch(){
+
+    if(revealed){
+
+        return;
+
+    }
+
+
+    const pixels=
+        ctx.getImageData(
+            0,
+            0,
+            scratchCanvas.width,
+            scratchCanvas.height
+        ).data;
+
+
+    let transparent=0;
+
+    let total=0;
+
+
+    for(
+        let i=3;
+        i<pixels.length;
+        i+=32
+    ){
+
+        total++;
+
+
+        if(
+            pixels[i]<100
+        ){
+
+            transparent++;
+
+        }
+
+    }
+
+
+    const percentage=
+        transparent/total;
+
+
+    if(
+        percentage>=.18
+    ){
+
+        revealDate();
+
+    }
+
+}
+
+
+/* =====================================================
+   REVEAL DATE
+===================================================== */
+
+function revealDate(){
+
+    if(revealed){
+
+        return;
+
+    }
+
+
+    revealed=true;
+
+
+    scratchCard.classList.add(
+        "revealed"
+    );
+
+
+    document
+        .getElementById(
+            "afterScratch"
+        )
+        .classList.add(
+            "show"
+        );
+
+
+    document
+        .getElementById(
+            "revealButton"
+        )
+        .style.display="none";
+
+}
+
+
+/* =====================================================
+   POINTER EVENTS
+===================================================== */
+
+scratchCanvas.addEventListener(
+    "pointerdown",
+    function(event){
+
+        if(revealed){
+
+            return;
+
+        }
+
+
+        scratching=true;
+
+
+        lastPoint=
+            getPoint(event);
+
+
+        try{
+
+            scratchCanvas.setPointerCapture(
+                event.pointerId
+            );
+
+        }
+
+        catch(error){}
+
+
+        scratch(event);
+
+    }
+);
+
+
+scratchCanvas.addEventListener(
+    "pointermove",
+    scratch
+);
+
+
+scratchCanvas.addEventListener(
+    "pointerup",
+    function(){
+
+        scratching=false;
+
+        lastPoint=null;
+
+        checkScratch();
+
+    }
+);
+
+
+scratchCanvas.addEventListener(
+    "pointercancel",
+    function(){
+
+        scratching=false;
+
+        lastPoint=null;
+
+    }
+);
+
+
+/* =====================================================
+   REVEAL BUTTON
+===================================================== */
+
+document
+    .getElementById(
+        "revealButton"
+    )
+    .addEventListener(
+        "click",
+        revealDate
+    );
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+const weddingDate=
+    new Date(
+        "2026-11-05T16:00:00+05:30"
+    ).getTime();
+
+
+function updateCountdown(){
+
+    let difference=
+        Math.max(
+            0,
+            weddingDate-Date.now()
+        );
+
+
+    const days=
+        Math.floor(
+            difference/86400000
+        );
+
+
+    difference-=
+        days*86400000;
+
+
+    const hours=
+        Math.floor(
+            difference/3600000
+        );
+
+
+    difference-=
+        hours*3600000;
+
+
+    const minutes=
+        Math.floor(
+            difference/60000
+        );
+
+
+    difference-=
+        minutes*60000;
+
+
+    const seconds=
+        Math.floor(
+            difference/1000
+        );
+
+
+    document.getElementById(
+        "days"
+    ).textContent=
+        String(days).padStart(
+            2,
+            "0"
+        );
+
+
+    document.getElementById(
+        "hours"
+    ).textContent=
+        String(hours).padStart(
+            2,
+            "0"
+        );
+
+
+    document.getElementById(
+        "minutes"
+    ).textContent=
+        String(minutes).padStart(
+            2,
+            "0"
+        );
+
+
+    document.getElementById(
+        "seconds"
+    ).textContent=
+        String(seconds).padStart(
+            2,
+            "0"
+        );
+
+}
+
+
+updateCountdown();
+
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+/* =====================================================
+   RESIZE
+===================================================== */
+
+window.addEventListener(
+    "resize",
+    function(){
+
+        if(
+            !revealed &&
+            invitation.style.display!=="none"
+        ){
+
+            setupScratch();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>
